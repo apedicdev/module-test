@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!--
+  ~ Apedik_test
+  ~
+  ~ @author    Antonio Pedicini <me@apedik.dev>
+  ~ @website   https://apedik.dev
+  ~
+  -->
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="Magento\Sales\Api\OrderRepositoryInterface">
+        <plugin name="apedik_test_order_attributes_plugin" type="Apedik\Test\Plugin\Sales\Model\Order\OrderAttributesPlugin" sortOrder="10" />
+    </type>
+    <type name="Apedik\Test\Plugin\Sales\Model\Order\OrderAttributesPlugin">
+        <arguments>
+            <argument name="attributes" xsi:type="array">
+                <item name="custom_attribute_1" xsi:type="string">customer_email</item>
+                <item name="custom_attribute_2" xsi:type="string">total_qty_ordered</item>
+                <item name="complex_attribute" xsi:type="object">Apedik\Test\Model\Order\Attribute\ComplexAttribute</item>
+            </argument>
+        </arguments>
+    </type>
+    <type name="Magento\Sales\Api\Data\OrderInterface">
+        <plugin name="apedik_test_order_attributes_extension_plugin"
+                type="Apedik\Test\Plugin\Sales\Model\Order\OrderAttributesExtensionPlugin"/>
+    </type>
+</config>

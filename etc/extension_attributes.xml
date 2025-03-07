@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!--
+  ~ Apedik_test
+  ~
+  ~ @author    Antonio Pedicini <me@apedik.dev>
+  ~ @website   https://apedik.dev
+  ~
+  -->
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Api/etc/extension_attributes.xsd">
+    <extension_attributes for="Magento\Sales\Api\Data\OrderInterface">
+        <attribute code="custom_attribute_1" type="string"/>
+        <attribute code="custom_attribute_2" type="int"/>
+        <attribute code="complex_attribute" type="string"/>
+    </extension_attributes>
+</config>
