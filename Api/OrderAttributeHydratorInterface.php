@@ -15,5 +15,5 @@ use Magento\Sales\Api\Data\OrderInterface;
 
 interface OrderAttributeHydratorInterface
 {
-    public function hydrate(OrderInterface $order);
+    public function hydrate(OrderInterface $order): string;
 }

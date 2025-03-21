@@ -1,4 +1,5 @@
-<?php
+<?php /** @noinspection UnusedFormalParameterInspection */
+
 /**
  * Apedik_test
  *

@@ -42,9 +42,7 @@ class OrderAttributesTest extends TestCase
 
         $orderId = $order->getEntityId();
 
-        // Retrieve the order
-        $retrievedOrder = $this->orderRepository->get($orderId);
-        $extensionAttributes = $retrievedOrder->getExtensionAttributes();
+        $extensionAttributes = $this->orderRepository->get($orderId)->getExtensionAttributes();
 
         $this->assertNotNull($extensionAttributes);
 

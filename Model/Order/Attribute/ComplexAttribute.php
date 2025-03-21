@@ -16,7 +16,7 @@ use Apedik\Test\Api\OrderAttributeHydratorInterface;
 
 class ComplexAttribute implements OrderAttributeHydratorInterface
 {
-    public function hydrate(OrderInterface $order)
+    public function hydrate(OrderInterface $order): string
     {
         // Example: Combine customer group ID and order status
         return sprintf("%s_%s", $order->getCustomerGroupId(), $order->getStatus());

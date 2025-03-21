@@ -1,4 +1,5 @@
-<?php
+<?php /** @noinspection UnusedFormalParameterInspection */
+
 /**
  * Apedik_test
  *
@@ -11,7 +12,7 @@ declare(strict_types=1);
 
 namespace Apedik\Test\Plugin\Sales\Model\Order;
 
-use Magento\Sales\Api\Data\{OrderExtensionInterface, OrderInterface, OrderSearchResultInterface};
+use Magento\Sales\Api\Data\{OrderInterface, OrderSearchResultInterface};
 use Magento\Sales\Api\OrderRepositoryInterface;
 use Apedik\Test\Api\OrderAttributeHydratorInterface;
 
